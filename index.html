@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Altaamisa</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                 "Segoe UI", sans-serif;
+    background:#000;
+    color:#fff;
+    margin:0;
+}
+
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    background:rgba(0,0,0,0.45);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter: blur(6px);
+}
+
+.hero-text h1{
+    font-size:7rem;
+    font-weight:700;
+    letter-spacing:-3px;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:120px 30px;
+}
+
+.card{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    margin-bottom:180px;
+    background:#111;
+    padding:40px;
+    border-radius:30px;
+    transition:0.4s;
+}
+
+.card:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.card img{
+    width:50%;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    transition:0.4s;
+}
+
+.card img:hover{
+    transform:scale(1.03);
+}
+
+.text{
+    width:50%;
+}
+
+.text h2{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:white;
+    letter-spacing:-1px;
+}
+
+.text p{
+    line-height:1.9;
+    font-size:1.2rem;
+    color:#cfcfcf;
+}
+
+.final{
+    height:80vh;
+    position:relative;
+}
+
+.final img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.final-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    background:rgba(0,0,0,0.45);
+    padding:40px;
+    border-radius:25px;
+}
+
+.final-text h2{
+    font-size:5rem;
+    margin-bottom:15px;
+}
+
+.final-text p{
+    font-size:1.5rem;
+    color:#d9d9d9;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#b8b8b8;
+}
+
+@media (max-width: 900px){
+
+    .hero{
+        height:70vh;
+    }
+
+    .hero-text{
+        width:90%;
+        padding:25px;
+    }
+
+    .hero-text h1{
+        font-size:3.5rem;
+    }
+
+    .hero-text p{
+        font-size:1rem;
+    }
+
+    .card{
+        flex-direction:column !important;
+        gap:25px;
+        margin-bottom:100px;
+    }
+
+    .card img{
+        width:100%;
+        height:300px;
+        object-fit:cover;
+    }
+
+    .text{
+        width:100%;
+    }
+
+    .text h2{
+        font-size:2rem;
+    }
+
+    .text p{
+        font-size:1rem;
+    }
+
+    .final{
+        height:60vh;
+    }
+
+    .final-text{
+        width:90%;
+        padding:25px;
+    }
+
+    .final-text h2{
+        font-size:3rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <a href="#inicio">Inicio</a>
+    <a href="#introduccion">¿Qué es?</a>
+    <a href="#habitat">Hábitat</a>
+    <a href="#usos">Usos</a>
+   <a href="#flores">Flores</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <img src="hero.jpg">
+    <div class="hero-text">
+        <h1>Altamisa</h1>
+        <p>Artemisia Vulgaris</p>
+        <p>La Planta Medicinal Ancestral</p>
+    </div>
+</section>
+
+<div class="section">
+
+    <div class="card" id="introduccion">
+        <img src="introduccion.jpg">
+        <div class="text">
+            <h2>¿Qué es la Altamisa?</h2>
+            <p>
+                La altamisa es una planta medicinal conocida desde tiempos antiguos.
+                Ha sido utilizada tradicionalmente en distintas culturas por sus
+                propiedades naturales y su importancia en la medicina popular.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="planta.png">
+        <div class="text">
+            <h2>La Planta</h2>
+            <p>
+                La altamisa posee tallos firmes y hojas verdes características.
+                Puede crecer en diferentes ambientes y destaca por su resistencia.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="completa.jpg">
+        <div class="text">
+            <h2>Planta Completa</h2>
+            <p>
+                Cuando alcanza su desarrollo completo puede superar un metro de
+                altura y formar grupos de vegetación muy llamativos.
+            </p> 
+        </div>
+    </div>
+
+    <div class="card" id="habitat">
+        <img src="habitat.jpg">
+        <div class="text">
+            <h2>Hábitat Natural</h2>
+            <p>
+                Se encuentra principalmente en terrenos abiertos, bordes de caminos,
+                praderas y zonas con buena exposición al sol.
+            </p>
+        </div>
+    </div>
+
+<div class="card" id="flores">
+        <img src="flores.jpg">
+        <div class="text">
+            <h2>Flores</h2>
+            <p>
+                Sus flores son pequeñas y aparecen agrupadas en la parte superior
+                de la planta durante la época de floración.
+            </p>
+        </div>
+    </div>
+
+<div class="card" id="usos">
+        <img src="te.jpg">
+        <div class="text">
+            <h2>Usos Tradicionales</h2>
+            <p>
+                Una de las formas más conocidas de uso tradicional es la infusión
+                preparada con partes de la planta.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<section class="final">
+    <img src="cierre.jpg">
+    <div class="final-text">
+        <h2>Altamisa</h2>
+        <p>Una planta medicinal con historia y tradición.</p>
+    </div>
+</section>
+
+</body>
+</html>
