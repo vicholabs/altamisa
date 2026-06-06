@@ -38,6 +38,17 @@ body{
     object-fit:cover;
 }
 
+.hero-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 1.5s ease;
+}
+
+.hero-slide.active{
+    opacity:1;
+}
+
 .hero-text{
     position:absolute;
     top:50%;
@@ -266,7 +277,12 @@ body{
 </nav>
 
 <section class="hero" id="inicio">
-    <img src="hero.jpg">
+
+    <img src="hero.jpg" class="hero-slide active">
+    <img src="hero1.jpg" class="hero-slide">
+    <img src="hero2.jpg" class="hero-slide">
+    <img src="hero3.jpg" class="hero-slide">
+
     <div class="hero-text">
         <h1>Altamisa</h1>
         <p>Artemisia Vulgaris</p>
@@ -382,6 +398,28 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+</script>
+
+<script>
+
+const slides = document.querySelectorAll(".hero-slide");
+
+let currentSlide = 0;
+
+setInterval(() => {
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+
+}, 5000);
 
 </script>
 
