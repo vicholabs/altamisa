@@ -174,7 +174,7 @@ body{
     font-size:0.95rem;
 }
 
-.navbar a:hover{
+.navbar a.active{
     background:white;
     color:black;
 
@@ -255,11 +255,11 @@ body{
 </head>
 <body>
 <nav class="navbar">
-    <a href="#inicio">Inicio</a>
-    <a href="#introduccion">¿Qué es?</a>
-    <a href="#habitat">Hábitat</a>
-    <a href="#usos">Usos</a>
-   <a href="#flores">Flores</a>
+    <a href="#inicio" class="nav-link">Inicio</a>
+    <a href="#introduccion" class="nav-link">¿Qué es?</a>
+    <a href="#habitat" class="nav-link">Hábitat</a>
+    <a href="#usos" class="nav-link">Usos</a>
+    <a href="#flores" class="nav-link">Flores</a>
 </nav>
 
 <section class="hero" id="inicio">
@@ -349,8 +349,38 @@ body{
         <p>Una planta medicinal con historia y tradición.</p>
     </div>
 </section>
+<script>
+
+const sections = document.querySelectorAll("section, .card");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 200;
+
+        if(window.scrollY >= sectionTop){
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
-
-<html lang="es">
