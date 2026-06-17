@@ -123,6 +123,48 @@ body{
     color:#cfcfcf;
 }
 
+.quote{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:100px;
+    background:#000;
+}
+
+.quote h2{
+    font-size:3rem;
+    line-height:1.8;
+    max-width:1100px;
+    text-align:center;
+
+    background:linear-gradient(
+        90deg,
+        #444 0%,
+        #fff 50%,
+        #444 100%
+    );
+
+    background-size:300% 100%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+
+    from{
+        background-position:100% 0;
+    }
+
+    to{
+        background-position:-100% 0;
+    }
+
+}
+
 .final{
     height:80vh;
     position:relative;
@@ -334,9 +376,9 @@ body{
         <div class="text">
             <h2>Hábitat Natural</h2>
             <p>
-                Esta planta prefiere lugares soleados y suelos bien drenados.
-            Aparece en caminos, terrenos bien abiertos, praderas y zonas con buena exposición al sol.
-            Esta planta crece en varias partes del mundo, incluyendo a Chile en lugares como Alto Bio Bio.
+                Esta planta crece en varias partes del mundo, incluyendo a Chile en lugares como Alto Bio Bio.
+                Prefiere lugares soleados y suelos bien drenados y Aparece en caminos, terrenos bien abiertos, praderas y zonas con buena exposición al sol.
+            
 
             </p>
         </div>
@@ -359,12 +401,20 @@ body{
             <h2>Usos Tradicionales</h2>
             <p>
                 Una de las formas más conocidas de uso tradicional es la infusión
-                preparada con partes de la planta.
+                preparada con partes de la planta. (este remedio casero se ha transmitido de generación en generación y seguirá siendo parte de la cultura y tradición)
             </p>
         </div>
     </div>
 
 </div>
+
+<section class="quote">
+
+    <h2>
+        Entre hojas, aromas y tradiciones, la altamisa ha dejado una huella que atraviesa generaciones. Su presencia nos recuerda que la naturaleza guarda conocimientos valiosos que han acompañado a la humanidad durante siglos. Más que una simple planta, la altamisa representa la conexión entre las personas, la historia y el mundo natural que nos rodea.
+    </h2>
+
+</section>
 
 <section class="final">
     <img src="cierre.jpg">
