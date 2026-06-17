@@ -305,6 +305,17 @@ body{
 
 }
 
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
 </style>
 </head>
 <body>
@@ -335,7 +346,7 @@ body{
 
 <div class="section">
 
-    <div class="card" id="introduccion">
+    <div class="card fade-up" id="introduccion">
         <img src="introduccion.jpg">
         <div class="text">
             <h2>¿Qué es la Altamisa?</h2>
@@ -348,7 +359,7 @@ body{
         </div>
     </div>
 
-    <div class="card" id="planta">
+    <div class="card fade-up" id="planta">
     <img src="planta.png">
         <div class="text">
             <h2>La Planta</h2>
@@ -361,7 +372,7 @@ body{
         </div>
     </div>
 
-   <div class="card" id="propiedades medicinales">
+   <div class="card fade-up" id="propiedades medicinales">
     <img src="completa.jpg">
         <div class="text">
             <h2>Propiedades Medicinales</h2>
@@ -371,7 +382,7 @@ body{
         </div>
     </div>
 
-    <div class="card" id="habitat">
+    <div class="card fade-up" id="habitat">
         <img src="habitat.jpg">
         <div class="text">
             <h2>Hábitat Natural</h2>
@@ -384,7 +395,7 @@ body{
         </div>
     </div>
 
-<div class="card" id="flores">
+<div class="card fade-up" id="flores">
         <img src="flores.jpg">
         <div class="text">
             <h2>Flores</h2>
@@ -395,7 +406,7 @@ body{
         </div>
     </div>
 
-<div class="card" id="usos">
+<div class="card fade-up" id="usos">
         <img src="te.jpg">
         <div class="text">
             <h2>Usos Tradicionales</h2>
