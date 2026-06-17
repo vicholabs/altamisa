@@ -151,6 +151,15 @@ body{
     -webkit-text-fill-color:transparent;
 
     animation:shine 6s linear infinite;
+
+opacity:0;
+transform:translateY(40px) scale(0.95);
+transition:all 1.2s ease;
+}
+
+.quote h2.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
 }
 
 @keyframes shine{
@@ -500,6 +509,17 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".fade-up").forEach(el => {
     observer.observe(el);
+});
+const quote = document.querySelector(".quote h2");
+
+window.addEventListener("scroll", () => {
+
+    const trigger = quote.getBoundingClientRect().top;
+
+    if(trigger < window.innerHeight * 0.8){
+        quote.classList.add("show");
+    }
+
 });
 </script>
 
